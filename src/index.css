@@ -1,13 +1,82 @@
 body {
   margin: 0;
+  padding:0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    min-width:100vw;
+    min-height:100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button{
+  margin-left: 7px;
+  border: none;
+  padding: 5px 12px;
+  background-color: bisque;
+  border-radius: 3px;
+  cursor: pointer;
 }
+.App{
+  display: grid;
+  grid-template-rows: .2fr 1fr .1fr;
+  width: 100vw; height: 100vh;
+  }
+.Header, .main, .footer{
+  text-align:center;
+  width:100%;
+}
+.Header{
+  display:grid;
+  background-color:mediumblue;
+  width: 100%; height:100%;
+}
+.main{
+  text-align: center;
+  padding-top: 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main h2{
+  text-transform: capitalize;
+}
+/* =======nav styling===== */
+.right{
+  border: 2px solid green;
+  padding: 10%; height: 40%;
+  margin: 0 auto;
+  padding: 4%;
+  
+}
+#navbars{
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+/* ====hiding navBars==== */
+.hidden li:first-child{
+  opacity: 0;
+  transition: .6s linear;
+}
+.hidden li:nth-child(2){
+  opacity: 0;
+  transition: .4s linear;
+}
+.hidden li:last-child{
+  opacity: 0;
+  transition: .2s linear;
+}
+
+.right li{
+  list-style: none;
+  background-color: grey;
+  width: 90px; height: 30px;
+  margin: 10px;
+}
+
+.footer{
+  background-color:grey;
+}
+
+
