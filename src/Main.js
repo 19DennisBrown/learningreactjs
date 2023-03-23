@@ -1,7 +1,5 @@
 import React from "react"
 import { useState } from "react"
-import { NavLink } from "react-router-dom"
-
 
 
 const Person = (props)=>{
@@ -19,35 +17,7 @@ const CounterSave = ()=>{
     </div>
   )
 }
-const navHide = ()=>{
-  const navBars = document.getElementById("navbars")
-  navBars.classList.toggle("hidden")
-}
-const NavButton = ()=>{
-  return(
-    <>
-    
-        <button className="navbtn" onClick={navHide} >
-          Menu
-        </button>
-        <ul id="navbars">
-          <li>
-          <NavLink
-              className="navbar-item"
-              activeClassName="is-active"
-              to="/aside"
-              exact>
-            Aside
-          </NavLink>
-          </li>
-          <li>User</li>
-          <li>Profile</li>
-        </ul>
 
-        
-    </>
-  )
-}
 
 const Content = () => {
   const [counter, setCounter] = useState(0)
@@ -86,9 +56,8 @@ const Content = () => {
                 <CounterSave/>
                 <Person name = 'Jay'/>
             </section>
+
             <section className="right">
-              <NavButton/>
-              
             </section>
         </main>
         
