@@ -105,6 +105,26 @@ button{
   width: 90px; height: 30px;
   margin: 10px;
 }
+/* =====aside images styling===== */
+
+.img--collection{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px;
+}
+.img--collection div{
+  border-radius: 17px;
+  box-shadow:inset 2px 2px 15px grey;
+  max-width:250px ; 
+  display: grid;
+  align-items: center;
+}
+.img--collection img{
+  border-radius: 7px;
+  max-width: 100%;
+}
 
 .footer{
   background-color:grey;
