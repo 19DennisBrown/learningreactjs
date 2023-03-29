@@ -7,7 +7,6 @@ const Aside = () => {
   return (
     <div>
       <>
-
       <h1>
         Aside.
       </h1>
