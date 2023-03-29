@@ -20,7 +20,7 @@ const CounterSave = ()=>{
 
 
 const Content = () => {
-  const [counter, setCounter] = useState(01)
+  const [counter, setCounter] = useState(1)
 
   const handleCounter = ()=>{
     setCounter(counter + 1)
