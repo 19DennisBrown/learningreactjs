@@ -1,42 +1,54 @@
 
 
 import React from 'react'
-import Cityone from './images/cityone.jpeg'
+import cityone from './images/cityone.jpeg'
 import citytwo from './images/citytwo.jpeg'
 import citythree from './images/citythree.jpeg'
-import cityfour from './images/cityone.jpeg'
+import cityfour from './images/cityfour.jpeg'
 
 const Images=()=>{
+
+   const Card=(props)=>{
+    return(
+      <>
+        <img src={props.image} alt="" />  
+          <p className= 'info'>
+            {props.description} <br/>
+            <b>{props.town}</b>
+          </p>
+      </>
+    )
+   }
   return(
     <section>
       <section className="img--collection">
         <div>
-          <img src={Cityone} alt="" />  
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta dolorum optio!
-            <b>Ohio, Japan</b>
-          </p>
+          <Card
+            image={cityone}
+            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta dolorum optio!'
+            town='Ohhio, Japan'
+          />
         </div>
         <div>
-          <img src={citytwo} alt="" />  
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta dolorum optio!
-            <b>Ohio, Japan</b>
-          </p>
+        <Card
+            image={citytwo}
+            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta dolorum optio!'
+            town='Rumuruti, Kenya'
+          />
         </div>
         <div>
-          <img src={citythree} alt="" />  
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta dolorum optio!
-            <b>Ohio, Japan</b>
-          </p>
+        <Card
+            image={citythree}
+            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta dolorum optio!'
+            town='Luganja, Uganda'
+          />
         </div>
         <div>
-          <img src={cityfour} alt="" />  
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta dolorum optio!
-            <b>Ohio, Japan</b>
-          </p>
+        <Card
+            image={cityfour}
+            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta dolorum optio!'
+            town='Goma, DRC'
+          />
         </div>
          
       </section>
