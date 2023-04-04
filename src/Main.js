@@ -34,6 +34,8 @@ const Content = () => {
   const deleteCounter = ()=>{
     document.getElementById("counter").innerText = `Current Count: `
   }
+
+  
   return (
     < >    
         <main className='main'>
@@ -58,6 +60,7 @@ const Content = () => {
             </section>
 
             <section className="right">
+             
             </section>
         </main>
         

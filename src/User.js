@@ -1,15 +1,41 @@
 import React from 'react'
 
 const User = () => {
-  return (
+  //Collect and display.
+  
+    const fruits = []
+    const addElements=() =>{
+      fruits.push(
+        {
+          fruitName: "Mango",
+          color: "Yellow",
+          figure:"sphere"
+        }
+      )
+    }
 
+    const displayElement=() =>{
+      addElements()
+      fruits.forEach((fruit)=>{
+        const {fruitName, color, figure} = fruit
+        document.getElementById("person").textContent =`The fruit is called ${fruitName} which is color ${color} and ${figure} in shape.`
+      })
+    }
+    const eraseElement=()=>{
+      document.getElementById("person").textContent = ""
+    }
+  return (
     <>
       <div>
         <>
         <h1>This is the User.</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, facere blanditiis? Aut vero ratione, perferendis, accusantium, nihil voluptatem laboriosam aperiam dolore quae impedit neque! Earum magnam sint, obcaecati blanditiis totam corrupti eius ipsum quibusdam voluptates atque natus aspernatur temporibus numquam rerum, repellat a. Hic, tempore! Nesciunt eaque asperiores quos quam quis impedit atque hic. Enim cumque iure quae. Quaerat dignissimos, ea quia cum saepe necessitatibus aut reprehenderit sit esse officiis nesciunt possimus voluptate sint rerum, fuga suscipit amet dicta praesentium dolore a vel! Atque libero possimus explicabo magnam molestias voluptate repellendus exercitationem ad rem in, tenetur suscipit beatae quibusdam laboriosam!
-        </p>
+        <div>
+          <button onClick={displayElement} >click</button>
+          <button className='delete-btn' onClick={eraseElement} >X</button>
+          <section id="person">
+
+          </section>
+        </div>
         </>
       </div>
       
