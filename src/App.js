@@ -3,6 +3,7 @@ import Main from './Main';
 import Aside from './Aside';
 import Navs from './Navs';
 import User from './User';
+import Pages from './Pages';
 import Footer from './Footer';
 import {Routes, Route} from 'react-router-dom'
 
@@ -17,14 +18,12 @@ function App() {
     
     
       <div className="App">
-       
-
         <Header/>
-       
         <Routes path='/navs' element={<Navs/>}>
           <Route path="/" element={<Main/> } />
           <Route path="/aside" element={<Aside/> } />
           <Route path="/user" element={<User/> } />
+          <Route path="/pages" element={<Pages/> } />
         </Routes>
         <Footer/>
       </div>

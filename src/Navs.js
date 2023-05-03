@@ -30,6 +30,14 @@ const NavBtns =()=>{
           User
         </NavLink>
       </li>
+      <li>
+        <NavLink
+            className='linkBtn' 
+            to="/pages"
+            exact>
+          Pages
+        </NavLink>
+      </li>
     </ul>
     
   )

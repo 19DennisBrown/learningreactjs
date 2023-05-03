@@ -2,14 +2,13 @@ import React from 'react'
 
 const User = () => {
   //Collect and display.
-  
     const fruits = []
     const addElements=() =>{
       fruits.push(
         {
           fruitName: "Mango",
           color: "Yellow",
-          figure:"sphere"
+          figure:"spherical"
         }
       )
     }
