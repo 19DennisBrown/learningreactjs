@@ -1,0 +1,59 @@
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviewing{
+  width: 500px;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  border-bottom: 2px solid black;
+}
+.reviewing>div>img{
+  width: 250px;
+  border-radius: 10px;
+  transition: .4s linear;
+}
+.reviewing>div>img:hover{
+  transform: rotate(8deg) scale(.8) ;
+  box-shadow: 2px 2px 32px rgba(0,0,0,0.9);
+}
+.review-info{
+  display: grid;
+}
+.type, .rating{
+  font-weight: bold;
+}
+.date{
+  font-size: 16px;
+}
+.complements{
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.butns>button:nth-child(1){
+  background-color: rgb(146, 230, 146);
+  color: white;
+}
+.butns>button:nth-child(2){
+  background-color: rgb(235, 100, 100);
+}
+
+@media screen and (max-width: 768px){
+  .reviewing>div>img{
+    width: 200px;
+    border-radius: 10px;
+  }
+  .reviewing>div>img:hover{
+    transform: rotate(-7deg) scale(1.1) ;
+  }
+  .container{
+    width: 80vw;
+    margin: 20px auto;
+  }
+  
+}

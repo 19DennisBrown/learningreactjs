@@ -1,0 +1,121 @@
+
+
+.main-content{
+  width: 90vw; height: 100vh;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+}
+.text{
+  padding-top: 120px;
+  border-right: 2px solid black;
+}
+.text>h1{
+  color: transparent;
+  font-size: 50px;
+  margin:0 auto ;
+  width: 300px;
+  -webkit-text-stroke: 2px brown;
+  position: relative;
+}
+.text>h1::before{
+  content: '';
+  position: absolute;
+  -webkit-text-stroke: 2px grey;
+  top: 0;
+  width: 100%; height: 110%;
+  border-radius: 12px;
+  animation: animate 12s alternate infinite;
+}
+.text>h3, .text>p{
+  margin: 30px auto;
+  text-align: center;
+  max-width: 200px;
+}
+.text>button{
+  width: 150px; height: 30px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: white;
+  display: grid;
+  place-items: center;
+  margin: 10px auto;
+  background-color: rgb(130, 218, 130);
+  transition: .4s linear;
+}
+.text>button:hover{
+  color: rgb(130, 218, 130);
+  background-color: white;
+  border: 1px solid rgb(130, 218, 130);
+}
+.images{
+  padding: 50px;
+}
+.images>img{
+  width: 500px; height: 500px;
+  border-radius: 4%;
+  border: 5px solid white;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9);
+}
+
+
+
+
+@media screen and (max-width:768px){
+  .main-content{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgb(171, 161, 145);
+    place-items: center;
+  }
+  .images>img{
+    width: 200px; height: 200px;
+    border-radius: 5%;
+    border: 5px solid white;
+  }
+  .text{
+    padding-top: 10px;
+    border-right: none;
+    border-bottom: 2px solid black;
+  }
+}
+
+
+@keyframes animate{
+  0%{
+    width: 0%;
+    content: '';
+  }
+  10%{
+    content: 'Ci';
+  }
+  20%{
+    content: 'Cit';
+  }
+  30%{
+    content: 'City';
+  }
+  40%{
+    content: 'City P';
+  }
+  50%{
+    content: 'City Pr';
+  }
+  60%{
+    content: 'City Pro';
+  }
+  70%{
+    content: 'City Prof';
+  }
+  80%{
+    content: 'City Profi';
+  }
+  90%{
+    content: 'City Profil';
+  }
+  100%{
+    width:100%;
+    content: 'City Profile';
+  }
+}

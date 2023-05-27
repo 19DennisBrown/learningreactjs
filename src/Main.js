@@ -1,71 +1,31 @@
 import React from "react"
+import './Styles/Main.css'
+import Pic from './images/citythree.jpeg'
+import Pic2 from './images/cityone.jpeg'
+import Pic3 from './images/cityfour.jpeg'
 import { useState } from "react"
 
 
-const Person = (props)=>{
-  return(
-    <>
-      <h1>PERSON</h1>
-      <h3>Name: {props.name} </h3>
-    </>
-  )
-}
-const CounterSave = ()=>{
-  return(
-    <div id="counter">
-      Current Count:
+
+
+const Main = () => {
+  return (
+    <div className="main-content">
+      <section className="text">
+        <h1>City Profile</h1>
+        <h3>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, at.
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia provident saepe eius quos illum tempore praesentium animi quasi nemo eos.
+        </p>
+        <button>JOIN US.</button>
+      </section>
+      <section className="images">
+        <img src={Pic} alt="" />
+      </section>
     </div>
   )
 }
 
-
-const Content = () => {
-  const [counter, setCounter] = useState(0)
-
-  const handleCounter = ()=>{
-    setCounter(counter + 1)
-  }
-  const resetCounter = ()=>{
-    setCounter(0)
-  }
-  const saveCounter = ()=>{
-    document.getElementById("counter").innerText += `,${counter}`
-  }
-  const deleteCounter = ()=>{
-    document.getElementById("counter").innerText = `Current Count: `
-  }
-
-  
-  return (
-    < >    
-        <main className='main'>
-
-            <section className="left">
-
-                <button onClick={handleCounter} >
-                  ADD
-                </button>
-                <h2>{counter}</h2>
-                <button onClick={resetCounter} >
-                  RESET
-                </button>
-                <button onClick={saveCounter} >
-                  SAVE
-                </button>
-                <button onClick={deleteCounter} >
-                  DELETE
-                </button>
-                <CounterSave/>
-                <Person name = 'Jay'/>
-            </section>
-
-            <section className="right">
-             
-            </section>
-        </main>
-        
-    </>
-  )
-}
-
-export default Content
+export default Main

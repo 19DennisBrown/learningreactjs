@@ -4,72 +4,66 @@ import './Styles/Pages.css'
 import { useState } from 'react'
 
 import CityFour from './images/cityfour.jpeg'
+import CityThree from './images/citythree.jpeg'
+import CityTwo from './images/citytwo.jpeg'
 import CityOne from './images/cityone.jpeg'
 
 
-const Pages = () =>{
- const [round, setRound] = useState(1)
- const multiple=()=>{
-  setRound(round * 2)
-  document.querySelector('#h3').textContent += `${round},`
- }
 
- let sessions = [ ]
- const display=()=>{
-   sessions.forEach((session)=>{ 
-      const details = document.querySelector('.container-level')
-      details.innerHTML = `
-      <div class='detaild'>
-        <img src=${session.images} class='image'/>
-        <div class='bio'>
-          <h1>${session.title}</h1>
-          <p>${session.level}</p>
-          <h6>${session.reqs}</h6>
+const Sessions=(props)=>{
+  const [details, setDetails] = useState(true)
+  const [info, setInfo] = useState(false)
+  const handleAppear=()=>{
+        setInfo(!info)
+        setDetails(!details)
+      }
+      return(
+    <>
+      {info ? 
+        <div className='sessions'>
+          <img src={props.image}/>
+          <div className='info'>
+            <h2>{props.city}</h2>
+            <h5>{props.desc}</h5>
+          </div>
+          <button onClick={handleAppear} >XLOSE</button>
         </div>
-      </div>`
-    })
- }
- const pushing=()=>{
-  sessions.push(
-    {
-      images:CityFour,
-      title: 'SessionB',
-      level: 'Intermediate',
-      reqs: 'Beginner-level'
-    }
-  )
-  display()
-}
-const pushing1=()=>{
-  sessions.push(
-    {
-      images:CityOne,
-      title: 'SessionA',
-      level: 'Beginner',
-      reqs: 'Entry-level'
-    }
-    )
-    display()
-  }
-  const details = document.querySelector('.container-level')
+        : ''}
 
-  const backing=()=>{
-    document.querySelector('.detaild').textContent = {details}
-    }
+      {details ?
+      <button onClick={handleAppear} className='btn-img'>
+        <img src={props.image} alt="" />
+      </button> 
+      : ''}
+      
+    </>
+  )
+}
   
+const Pages = () => {
+
   return (
-    <div className='plans'> 
-      <section>
-        <button onClick={backing} >Back</button>  
-      </section>     
-      <section  className='cont container-level'>
-        <button  onClick={pushing} >
-          <img src={CityFour} alt='' className='img'/>
-        </button>
-        <button  onClick={pushing1} >
-          <img src={CityOne} alt='' className='img'/>
-        </button>
-      </section>
+    <div className='Container'>
+      <Sessions 
+      city='Ghudong, China' 
+      desc='Town of Umbrellas'
+      image={CityFour}
+      />
+      <Sessions 
+      city='Nairobi, Kenya' 
+      desc='Top in Public Transport Culture.'
+      image={CityThree}
+      />
+      <Sessions 
+      city='Kampala, Uganda' 
+      desc='Named after seven Impalas'
+      image={CityTwo}
+      />
+      <Sessions 
+      city='Kigali, Rwanda' 
+      desc='Futuristic City in E.Africa.'
+      image={CityOne}
+      />
     </div>
   )
 }
