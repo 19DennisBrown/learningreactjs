@@ -21,7 +21,7 @@ const Sessions=(props)=>{
     <>
       {info ? 
         <div className='sessions'>
-          <img src={props.image}  alt='image  here'/>
+          <img src={props.image}  alt='city  here'/>
           <div className='info'>
             <h2>{props.city}</h2>
             <h5>{props.desc}</h5>
