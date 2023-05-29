@@ -1,9 +1,6 @@
 import React from "react"
 import './Styles/Main.css'
 import Pic from './images/citythree.jpeg'
-import Pic2 from './images/cityone.jpeg'
-import Pic3 from './images/cityfour.jpeg'
-import { useState } from "react"
 
 
 
