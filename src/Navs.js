@@ -104,7 +104,7 @@ const Navs = () => {
           Remove
         </button>
       }
-      <NavBtns/>
+      <NavBtns/>  
       {navis ? 
         <NaviBtns/>
         : ''

@@ -1,5 +1,4 @@
 
-
 import React from 'react'
 import cityone from './images/cityone.jpeg'
 import citytwo from './images/citytwo.jpeg'
@@ -10,13 +9,13 @@ const Images=()=>{
 
    const Card=(props)=>{
     return(
-      <>
+      <div className='cards'>
         <img src={props.image} alt="" />  
           <p className= 'info'>
             {props.description} <br/>
             <b>{props.town}</b>
           </p>
-      </>
+      </div>
     )
    }
   return(
