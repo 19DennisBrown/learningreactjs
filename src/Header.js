@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className='Header'>
       <>
-        <h1>GLumber jaCK</h1>
+        <h1>Hawawii React</h1>
         <Navs />
       </>
     </header>

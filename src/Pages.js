@@ -43,7 +43,7 @@ const Sessions=(props)=>{
 const Pages = () => {
 
   return (
-    <div className='Container'>
+    <div className='Container-page'>
       <Sessions 
       city='Ghudong, China' 
       desc='Town of Umbrellas'
